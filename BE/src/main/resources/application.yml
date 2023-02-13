@@ -1,0 +1,21 @@
+server:
+  port: 8080
+
+spring:
+  datasource:
+    url: jdbc:postgresql://localhost:5432/currency_test_task
+    username: postgres
+    password: admin
+#    driver-class-name: org.postgresql.Driver
+  jpa:
+    hibernate:
+      ddl-auto: update
+    properties:
+      hibernate:
+        dialect: org.hibernate.dialect.PostgreSQLDialect
+        format_sql: true
+#        temp:
+#          use_jdbc_metadata_defaults: false
+    show-sql: true
+  main:
+    web-application-type: servlet
